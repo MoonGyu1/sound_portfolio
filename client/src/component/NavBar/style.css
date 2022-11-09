@@ -1,0 +1,19 @@
+.nav-left {
+  padding-left: 37px !important;
+  padding-right: 37px !important;
+}
+
+.nav-right {
+  padding-left: 17px !important;
+  padding-right: 17px !important;
+}
+
+.navbar-expand-lg {
+  justify-content: center;
+}
+
+.me-auto {
+  color: #999 !important;
+  font-size: 18px;
+  font-weight: 700 !important;
+}
