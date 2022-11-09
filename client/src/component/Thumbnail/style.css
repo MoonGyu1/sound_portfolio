@@ -1,0 +1,36 @@
+.circle {
+  border: 1px solid black;
+  display: inline-block;
+  padding: 150px;
+  background-image: url(./test-image.jpg);
+  background-size: 100%;
+  /* animation: circle 10s linear infinite; */
+}
+
+.circle:hover {
+  animation: circle 10s linear infinite;
+}
+
+@keyframes circle {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.middle {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.center {
+  padding: 20px;
+  border: 1px solid black;
+  background-color: #fff;
+}
+
+.circle,
+.middle,
+.center {
+  border-radius: 50%;
+}
