@@ -21,7 +21,7 @@ async function createApp(config) {
     cors({
       origin: urlConfig.clientUrl,
       credentials: true,
-    })
+    }),
   );
 
   app.use(express.json());
@@ -44,9 +44,7 @@ async function createApp(config) {
       })
       .on('error', (err) => {
         if (err.code === 'EADDRINUSE') {
-          printer.error(
-            `서버 시작에 실패했습니다. ${config.port}번 포트를 다른 프로그램이 사용중입니다.`
-          );
+          printer.error(`서버 시작에 실패했습니다. ${config.port}번 포트를 다른 프로그램이 사용중입니다.`);
         } else {
           printer.error(err);
         }

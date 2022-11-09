@@ -4,20 +4,21 @@ const util = require('../../lib/util');
 const statusCode = require('../../constants/statusCode');
 const responseMessage = require('../../constants/responseMessage');
 
-// 테스트
+// 유저 로그인
 module.exports = async (req, res) => {
-  const { userId } = req.body;
+  const { serviceId, password } = req.body;
 
-  if (!userId) {
+  if (!serviceId || !password) {
     return res.status(statusCode.BAD_REQUEST).send(util.fail(statusCode.BAD_REQUEST, responseMessage.NULL_VALUE));
   }
 
   let conn;
   try {
-    conn = await pool.getConnection(); // pool에서 connction 빌려오기
+    conn = await pool.getConnection();
+
+    const user = await userDB.getUserById(conn, serviceId, password);
 
     // 유저가 없는 경우
-    const user = await userDB.getUserById(conn, userId);
     if (!user) {
       return res.status(statusCode.NOT_FOUND).send(util.fail(statusCode.NOT_FOUND, responseMessage.NO_USER));
     }
