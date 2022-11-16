@@ -1,0 +1,52 @@
+.sthumbnail {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.stitle {
+  display: flex;
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 20px;
+  margin-bottom: 0px;
+}
+
+.sartist {
+  display: flex;
+}
+
+.like {
+  width: 50px;
+  height: 30px;
+}
+
+.like-num {
+  padding-right: 100px;
+}
+
+.video {
+  width: 50px;
+  height: 30px;
+}
+
+.play {
+  padding-right: 100px;
+}
+
+.type3-container {
+  display: grid;
+  grid-template-columns: 0.5fr 2.5fr auto;
+  padding: 10px;
+  border-bottom: 1px solid;
+}
+
+.type3 {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+  padding-bottom: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin: 5px;
+}

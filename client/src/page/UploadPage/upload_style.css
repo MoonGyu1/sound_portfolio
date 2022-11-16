@@ -1,0 +1,233 @@
+.sound-upload-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px;
+  padding-top: 100px;
+  flex-direction: column;
+}
+
+.music-info-container {
+  width: 700px;
+}
+
+.music-info-content {
+  /* display: flex; */
+  border: 1px solid;
+  border-radius: 25px;
+  padding: 50px;
+}
+
+.music-info-title {
+  display: flex;
+  padding-left: 20px;
+  font-weight: 800;
+  font-size: 35px;
+}
+
+.category-container {
+  padding-top: 30px;
+  width: 700px;
+}
+
+.content-description {
+  display: flex;
+}
+
+.category-content {
+  /* display: flex; */
+  border: 1px solid;
+  border-radius: 25px;
+  padding: 50px;
+}
+
+.category-title {
+  display: flex;
+  padding-left: 20px;
+  font-weight: 800;
+  font-size: 35px;
+}
+
+.category-description {
+  color: rgb(0 0 0 / 50%);
+  font-size: 13px;
+  padding-left: 13px;
+  padding-top: 18px;
+}
+
+.form-control {
+  background-color: rgb(217 217 217 / 40%);
+  margin-bottom: 2rem;
+}
+
+.form-control:focus {
+  background-color: rgb(217 217 217 / 40%);
+  box-shadow: 0 0 0 0.25rem rgb(217 217 217) !important;
+  border: none;
+}
+
+.form-label {
+  display: flex;
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+.mb-3.type {
+  display: flex;
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+.form-check-label {
+  font-size: 20px;
+}
+
+.form-check-input:checked {
+  background-color: #bb3232;
+  border-color: #bb3232;
+}
+
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.25rem rgb(187 50 50 / 50%) !important;
+}
+
+.music-type-container {
+  display: flex;
+}
+
+.soundcloud {
+  font-size: 15px;
+}
+
+.soundcloud.link {
+  width: 70%;
+  padding-right: 10px;
+}
+
+.soundcloud.start {
+  width: 30%;
+  padding-left: 10px;
+}
+
+.category-content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px;
+  padding-top: 5px;
+  padding-bottom: 25px;
+}
+
+.category-dropdown {
+  display: flex;
+  height: 100px;
+}
+
+.selected-category {
+  display: flex;
+  padding-left: 7px;
+}
+
+.dropdown-toggle.btn.btn-primary {
+  width: 300px;
+  background-color: #fff;
+  color: #000;
+  border-color: #000;
+  border-radius: 8px;
+}
+
+.btn-primary:active,
+.show > .btn-primary.dropdown-toggle {
+  background-color: #fff;
+  border-color: #000;
+}
+
+.dropdown-menu.show {
+  width: 300px;
+}
+
+.rounded-pill {
+  margin-bottom: 5px;
+  margin-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.tag-container {
+  padding-top: 30px;
+  width: 700px;
+}
+
+.content-description {
+  display: flex;
+}
+
+.tag-content {
+  /* display: flex; */
+  border: 1px solid;
+  border-radius: 25px;
+  padding: 50px;
+}
+
+.tag-title {
+  display: flex;
+  padding-left: 20px;
+  font-weight: 800;
+  font-size: 35px;
+}
+
+.tag-description {
+  color: rgb(0 0 0 / 50%);
+  font-size: 13px;
+  padding-left: 13px;
+  padding-top: 18px;
+}
+
+.fixed-tag-title,
+.custom-tag-title {
+  display: flex;
+  padding-left: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(34, 34, 34);
+}
+
+.custom-tag-title {
+  padding-top: 20px;
+  margin-bottom: 22px;
+}
+
+.tag-button-not-selected.btn.btn-primary,
+.tag-button-selected.btn.btn-primary {
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  height: 30px !important;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin: 5px;
+}
+
+.tag-delete-button {
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+.tag-button-selected {
+  background-color: #bb3232;
+  border-color: #bb3232;
+}
+
+.selected-tag {
+  display: flex;
+}
+
+.tag-button-not-selected {
+  background-color: #d9d9d9;
+  border-color: #d9d9d9;
+}

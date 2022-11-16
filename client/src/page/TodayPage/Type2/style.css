@@ -1,0 +1,28 @@
+.thumbnail {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.title {
+  font-weight: 600;
+  padding-top: 7px;
+}
+
+.type2-container {
+  padding: 10px;
+}
+
+.type2 {
+  width: 560px;
+  height: 560px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid;
+  border-radius: 40px;
+  padding-top: 15px;
+  padding-bottom: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin: 5px;
+}

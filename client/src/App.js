@@ -1,17 +1,29 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Auth from './middleware/Auth';
-import './App.css';
 import NavBar from './component/NavBar/NavBar';
+import Footer from './component/Footer/Footer';
 // import ThumbnailTest from './component/Thumbnail/ThumbnailTest';
-import TodayPage from './page/TodayPage/TadayPage';
+import TodayPage from './page/TodayPage/TodayPage';
 import LoginPage from './page/LoginPage/LoginPage';
-import UploadPage from './page/UploadPage/UploadPage';
+import SelectUploadPage from './page/UploadPage/SelectUploadPage';
+import SoundUploadPage from './page/UploadPage/SoundUploadPage ';
 import ChannelPage from './page/ChannelPage/ChannelPage';
+import './App.css';
 
 // restricted = null (누구나 접근 가능)
 // restricted = true (로그인 한 유저만 접근 가능)
 // restricted = false (로그인 안 한 유저만 접근 가능)
 function App() {
+  // const location = useLocation().pathname;
+  const Bottom = () => {
+    const location = useLocation().pathname;
+    if (location !== '/channel') {
+      return <Footer />;
+    } else {
+      return;
+    }
+  };
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -37,7 +49,15 @@ function App() {
             path="/upload"
             element={
               <Auth restricted={true}>
-                <UploadPage />
+                <SelectUploadPage />
+              </Auth>
+            }
+          />
+          <Route
+            path="/sound"
+            element={
+              <Auth restricted={true}>
+                <SoundUploadPage />
               </Auth>
             }
           />
@@ -50,6 +70,7 @@ function App() {
             }
           />
         </Routes>
+        <Bottom />
       </BrowserRouter>
     </div>
   );

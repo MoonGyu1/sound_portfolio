@@ -1,0 +1,23 @@
+.thumbnail6 {
+  width: 200px;
+  height: 200px;
+  border-radius: 40px;
+}
+
+.title {
+  font-weight: 600;
+  padding-top: 7px;
+}
+
+.type6-container {
+  padding: 10px;
+}
+
+.type6 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding-top: 15px;
+  padding-bottom: 50px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

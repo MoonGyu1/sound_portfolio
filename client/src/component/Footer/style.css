@@ -1,0 +1,45 @@
+.ft-container {
+  display: -webkit-inline-box;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  margin: 35px;
+}
+
+#ft {
+  background-color: #1f1f1f;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+}
+
+.img {
+  margin-left: 20px;
+}
+
+#str1 {
+  font-size: 17px;
+  margin-left: 75px;
+  margin-right: 35px;
+}
+
+#str2 {
+  font-size: 17px;
+  font-weight: 900;
+  margin-right: 35px;
+}
+
+#str3 {
+  font-size: 17px;
+  color: #d33535;
+  margin-right: 395px;
+}
+
+#str4 {
+  font-size: 16px;
+  color: #666;
+  font-weight: 600;
+  margin-left: 35px;
+}

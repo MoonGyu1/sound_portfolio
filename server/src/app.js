@@ -3,10 +3,17 @@ const cors = require('cors');
 const morgan = require('morgan');
 const printer = require('./lib/printer');
 const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
 const urlConfig = require('./config/urlConfig');
+const fileUpload = require('express-fileupload');
 
 async function createApp(config) {
   const app = express();
+
+  app.use(fileUpload());
+  app.use(bodyParser.json()); // for parsing application/json
+  app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+  // app.use(upload.array()); // for parsing multipart/form-data
 
   app.use(cookieParser(process.env.COOKIE_SECRET, { signed: true })); // 쿠키 암호화
 

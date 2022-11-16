@@ -1,0 +1,23 @@
+.thumbnail4 {
+  width: 230px;
+  height: 270px;
+  border-radius: 40px;
+}
+
+.title {
+  font-weight: 600;
+  padding-top: 7px;
+}
+
+.type4-container {
+  padding: 10px;
+}
+
+.type4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-top: 15px;
+  padding-bottom: 50px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

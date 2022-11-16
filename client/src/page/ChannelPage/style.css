@@ -1,0 +1,90 @@
+.channel-page-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 100px;
+  display: flex;
+}
+
+.channel-left {
+  display: inline;
+  width: 380px;
+  height: 90vh;
+  background-color: #d33535;
+  position: relative;
+}
+
+.channel-right {
+  position: absolute;
+  justify-content: center;
+  display: inline;
+  width: auto;
+  right: 0;
+  left: 380px;
+}
+
+.channel-left-content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 35px;
+  padding-left: 25px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 25px;
+}
+
+.profile-button {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  justify-content: center;
+  align-content: center;
+  /* flex-direction: column; */
+}
+
+.chatting {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.name,
+.description {
+  display: flex;
+  color: #fff;
+  font-size: 23px;
+  font-weight: 400;
+  padding-top: 15px;
+  margin-bottom: 0px;
+}
+
+.type-container {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+}
+
+.type-title-channel {
+  width: fit-content;
+  border-bottom: 4px solid;
+  display: flex;
+  font-weight: 800;
+  font-size: 25px;
+  margin-left: 30px;
+  margin-bottom: 0px;
+}
+
+.type6.channel {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-left: 10px;
+  margin-right: 10px;
+}
