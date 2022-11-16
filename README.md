@@ -37,7 +37,7 @@ Node.js
 - 로그인 페이지
   http://localhost:3000/signin
   <br>
-  ( 테스트 가능 아이디: talen123, 비밀번호: talen123 )
+  ( 테스트 가능 아이디: talent123, 비밀번호: talent123 )
 - 포트폴리오 업로드 유형 선택 페이지 http://localhost:3000/upload
   <br>
 - 사운드 포트폴리오 업로드 페이지 http://localhost:3000/sound
