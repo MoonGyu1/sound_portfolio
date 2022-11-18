@@ -157,6 +157,8 @@ const SoundUploadPage = (props) => {
   };
 
   const handleClickSubmit = async (e) => {
+    alert('포트폴리오가 저장되었습니다.');
+    window.location = '/channel';
     // e.preventDefault();
     // const formData = new FormData();
     // formData.append('file', ThumbnailImage);
