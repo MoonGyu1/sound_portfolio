@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import sample from '../asset/46_달.jpg';
 import like from './빈 하트.svg';
 import likeFull from './빨간 하트.svg';
+import playButton from './playButton.png';
 import video from './video.png';
 import './style.css';
 
@@ -16,10 +17,12 @@ const Type3 = (portfolio) => {
   //     setIsClicked('false');
   //   }
   // };
-
   return (
     <div className="type3-container">
-      <img className="sthumbnail" src={sample} alt="thumbnail" />
+      <div className="parent-img">
+        <img className="sthumbnail" src={sample} alt="thumbnail" />
+        <img className="play-button" src={playButton} alt="play-button" />
+      </div>
       <div
         style={{
           display: 'flex',
