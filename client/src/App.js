@@ -8,6 +8,7 @@ import LoginPage from './page/LoginPage/LoginPage';
 import SelectUploadPage from './page/UploadPage/SelectUploadPage';
 import SoundUploadPage from './page/UploadPage/SoundUploadPage ';
 import ChannelPage from './page/ChannelPage/ChannelPage';
+import ThumbnailTest from './component/Thumbnail/ThumbnailTest';
 import './App.css';
 
 // restricted = null (누구나 접근 가능)
@@ -37,6 +38,7 @@ function App() {
               </Auth>
             }
           />
+          <Route path="/test" element={<ThumbnailTest />} />
           <Route
             path="/signin"
             element={

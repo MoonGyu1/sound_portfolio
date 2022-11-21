@@ -85,23 +85,19 @@ function Thumbnail(props) {
   return (
     <div className="App">
       <div className="App-container">
-        <div class="circle">
-          <div class="middle">
-            <div class="center"></div>
+        <div
+          className="circle"
+          onMouseOver={onMouseOverPlay}
+          onMouseLeave={onMouseLeavePause}
+        >
+          <div className="middle">
+            <div className="center"></div>
           </div>
         </div>
         {/* 여기 코드 추가 */}
         <div>
-          <img
-            alt="thumbnail"
-            style={{ width: '100px' }}
-            src={testImage}
-            onMouseOver={onMouseOverPlay}
-            onMouseLeave={onMouseLeavePause}
-          />
-          <div />
           {isPlaying ? 'Pause' : 'Play'}
-          {/* style={{ display: 'none' }} */}
+
           <div className="soundcloud-section">
             <iframe
               title="thumbnail"
