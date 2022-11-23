@@ -21,8 +21,14 @@ const getUser = async (conn) => {
   return convertSnakeToCamel.keysToCamel(row);
 };
 
+const getUserProfileById = async (conn, userId) => {
+  const [row] = await conn.query(`SELECT * FROM \`user\` WHERE id IN (${userId.join()});`);
+  return convertSnakeToCamel.keysToCamel(row);
+};
+
 module.exports = {
   getUserById,
   getUserByUserId,
   getUser,
+  getUserProfileById,
 };

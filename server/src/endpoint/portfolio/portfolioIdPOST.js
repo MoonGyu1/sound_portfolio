@@ -7,11 +7,13 @@ const { toArrayOfString, toArrayOfNumber } = require('../../lib/convertArrayToSt
 
 // 사운드 포트폴리오 가져오기
 module.exports = async (req, res) => {
+  const portfolioId = req.body;
+
   let conn;
   try {
     conn = await pool.getConnection();
 
-    let portfolio = await portfolioDB.getPortfolio(conn);
+    let portfolio = await portfolioDB.getPortfolioById(conn, portfolioId);
 
     if (!portfolio) {
       return res.status(statusCode.NOT_FOUND).send(util.fail(statusCode.NOT_FOUND, responseMessage.NO_USER));

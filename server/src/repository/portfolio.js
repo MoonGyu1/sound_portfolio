@@ -16,6 +16,11 @@ const getPortfolio = async (conn) => {
   return convertSnakeToCamel.keysToCamel(row);
 };
 
+const getPortfolioById = async (conn, portfolioId) => {
+  const [row] = await conn.query(`SELECT * FROM sound_portfolio WHERE id IN (${portfolioId.join()});`);
+  return convertSnakeToCamel.keysToCamel(row);
+};
+
 // const getUserByUserId = async (conn, userId) => {
 //   const [row] = await conn.query('SELECT * FROM `user` WHERE id = ?;', [userId]);
 
@@ -25,4 +30,5 @@ const getPortfolio = async (conn) => {
 module.exports = {
   savePortfolio,
   getPortfolio,
+  getPortfolioById,
 };
