@@ -1,15 +1,13 @@
 import React, { useState, useEffect, createRef } from 'react';
 import loadscript from 'load-script';
-// import './Thumbnail.css';
 import './style.css';
+import playButton from './playButton.png';
+import stopButton from './stopButton.png';
 
-import testImage from './test-image.jpg';
 // SoundCloud widget API
 //  https://developers.soundcloud.com/docs/api/html5-widget
 
 function Thumbnail(props) {
-  // state
-
   // used to communicate between SC widget and React
   const [isPlaying, setIsPlaying] = useState(false);
   // const [playlistIndex, setPlaylistIndex] = useState(0);
@@ -26,7 +24,6 @@ function Thumbnail(props) {
     // use load-script module to load SC Widget API
     loadscript('https://w.soundcloud.com/player/api.js', () => {
       // initialize player and store reference in state
-
       const player = window.SC.Widget(iframeRef.current);
       setPlayer(player);
 
@@ -74,12 +71,12 @@ function Thumbnail(props) {
     });
   }, [isPlaying]);
 
-  const onMouseOverPlay = () => {
-    setIsPlaying(true);
-  };
-
-  const onMouseLeavePause = () => {
-    setIsPlaying(false);
+  const onClickPlay = () => {
+    if (isPlaying) {
+      setIsPlaying(false);
+    } else {
+      setIsPlaying(true);
+    }
   };
 
   return (
@@ -87,18 +84,30 @@ function Thumbnail(props) {
       <div className="App-container">
         <div
           className="circle"
-          onMouseOver={onMouseOverPlay}
-          onMouseLeave={onMouseLeavePause}
+          style={{ backgroundImage: `url('${props.imgUrl}')` }}
         >
           <div className="middle">
+            {!isPlaying ? (
+              <img
+                onClick={onClickPlay}
+                className="play-button"
+                src={playButton}
+                alt="play-button"
+              />
+            ) : (
+              <img
+                onClick={onClickPlay}
+                className="play-button"
+                src={stopButton}
+                alt="play-button"
+              />
+            )}
             <div className="center"></div>
           </div>
         </div>
         {/* 여기 코드 추가 */}
         <div>
-          {isPlaying ? 'Pause' : 'Play'}
-
-          <div className="soundcloud-section">
+          <div className="soundcloud-section" style={{ display: 'none' }}>
             <iframe
               title="thumbnail"
               ref={iframeRef}

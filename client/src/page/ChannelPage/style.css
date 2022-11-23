@@ -7,6 +7,9 @@
 }
 
 .channel-left {
+  background-image: url('./asset/1_background.jpg');
+  background-size: cover;
+  background-position: center center;
   display: inline;
   width: 380px;
   height: 100%;
@@ -58,6 +61,7 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .name,
@@ -68,6 +72,10 @@
   font-weight: 400;
   padding-top: 15px;
   margin-bottom: 0px;
+}
+
+.description {
+  font-size: 17px;
 }
 
 .channel-left-content,
@@ -101,7 +109,8 @@
 }
 
 .num.toggled {
-  padding: 20px;
+  padding: 10px;
+  padding-left: 20px;
 }
 
 .toggle-content {

@@ -270,7 +270,7 @@ const SoundUploadPage = (props) => {
                   <Form.Label className="soundcloud">링크 *</Form.Label>
                   <Form.Control
                     type="text"
-                    placeholder="https://~~"
+                    placeholder="https://soundcloud.com/"
                     value={SoundcloundLink}
                     onChange={({ target }) => setSoundcloundLink(target.value)}
                   />
@@ -291,7 +291,7 @@ const SoundUploadPage = (props) => {
                   <Form.Label className="soundcloud">
                     MP3 파일 업로드 *
                   </Form.Label>
-                  <Form.Control type="text" placeholder="https://~~" />
+                  <Form.Control type="text" placeholder="파일 링크" />
                 </Form.Group>
                 <Form.Group className="mb-3 soundcloud start">
                   <Form.Label className="soundcloud">재생 시작 지점</Form.Label>

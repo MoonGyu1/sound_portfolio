@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button } from 'react-bootstrap';
 import client from '../../axios';
-import sample from './asset/46_달.jpg';
 import follow from './asset/팔로우 버튼.png';
 import chatting from './asset/프로필_채팅버튼.svg';
 import share from './asset/프로필_공유버튼.svg';
@@ -12,17 +10,27 @@ import Type6 from '../TodayPage/Type6/Type6';
 import './style.css';
 
 const ChannelPage = (props) => {
-  const [Portfolio, setPortfolio] = useState();
+  const [Portfolio1, setPortfolio1] = useState();
+  const [Portfolio2, setPortfolio2] = useState();
   const [Artist, setArtist] = useState();
   const [ToggleProfile, setToggleProfile] = useState('false');
 
   useEffect(() => {
     async function getPortfolio() {
-      const response = await client.get('/api/portfolio');
-      setPortfolio(response.data.data);
+      let response = await client.post(
+        '/api/portfolio/id',
+        [22, 23, 24, 25, 26, 27, 28, 29]
+      );
+      setPortfolio1(response.data.data);
+
+      response = await client.post(
+        '/api/portfolio/id',
+        [30, 31, 32, 33, 34, 35]
+      );
+      setPortfolio2(response.data.data);
     }
     async function getArtist() {
-      const response = await client.get('/api/user');
+      let response = await client.post('/api/user/id', [1]);
       setArtist(response.data.data[0]);
     }
 
@@ -43,6 +51,11 @@ const ChannelPage = (props) => {
       <div
         className="channel-left"
         style={{
+          backgroundImage: `${
+            ToggleProfile === 'false'
+              ? "url('images/1_background.jpg')"
+              : 'none'
+          }`,
           backgroundColor: `${ToggleProfile === 'false' ? '#d33535' : '#fff'}`,
           borderRight: `${ToggleProfile === 'false' ? 'none' : '1px solid'}`,
         }}
@@ -51,9 +64,13 @@ const ChannelPage = (props) => {
         {ToggleProfile && ToggleProfile === 'false' ? (
           <div className="channel-left-content">
             <div className="profile">
-              <img className="photo" src={sample} alt="user" />
+              <img
+                className="photo"
+                src={Artist && `images/${Artist.photo}`}
+                alt="user"
+              />
               <p className="name">{Artist && Artist.username}</p>
-              <p className="description">정보</p>
+              <p className="description">가수 · 배우</p>
             </div>
             <div className="profile-button">
               <img className="follow" src={follow} alt="follow" />
@@ -121,22 +138,18 @@ const ChannelPage = (props) => {
         <div className="type-container">
           <p className="type-title-channel">사운드 포트폴리오</p>
           <div className="type3">
-            {Portfolio &&
-              Portfolio.map((a, i) => {
-                while (i < 4) {
-                  return Type3(a);
-                }
+            {Portfolio1 &&
+              Portfolio1.map((a, i) => {
+                return Type3(a);
               })}
           </div>
         </div>
         <div className="type-container">
           <p className="type-title-channel">이미지 포트폴리오</p>
           <div className="type6 channel">
-            {Portfolio &&
-              Portfolio.map((a, i) => {
-                while (i < 4) {
-                  return Type6(a);
-                }
+            {Portfolio2 &&
+              Portfolio2.map((a, i) => {
+                return Type6(a);
               })}
           </div>
         </div>

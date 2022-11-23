@@ -6,7 +6,11 @@ import './style.css';
 const Type4 = (portfolio) => {
   return (
     <div className="type4-container">
-      <img className="thumbnail4" src={sample} alt="thumbnail" />
+      <img
+        className="thumbnail4"
+        src={`images/${portfolio.image}`}
+        alt="thumbnail"
+      />
       <p className="title">{portfolio.title}</p>
     </div>
   );

@@ -32,11 +32,12 @@
 
 .play {
   padding-right: 100px;
+  width: max-content;
 }
 
 .type3-container {
   display: grid;
-  grid-template-columns: 0.5fr 2.5fr auto;
+  grid-template-columns: 0.5fr 2.5fr 1.5fr;
   padding: 10px;
   border-bottom: 1px solid;
 }
@@ -57,6 +58,7 @@
   top: 0;
   left: 0;
 }
+
 .sthumbnail {
   position: relative;
   top: 0;
@@ -64,7 +66,7 @@
 }
 .play-button {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: -1px;
+  left: -1px;
   width: 100px;
 }
